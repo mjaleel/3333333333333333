@@ -606,7 +606,7 @@ def main():
             )
         with col_f2:
             filter_pct = st.slider(
-                "نسبة المطابقة ≥", 80, 100, 0, key="filter_pct"
+                "نسبة المطابقة ≥", 0, 100, 0, key="filter_pct"
             )
 
         display_df = result_df.copy()
@@ -637,7 +637,7 @@ def main():
         styled = (
             display_df.style
             .apply(color_row, axis=1)
-            .applymap(color_pct, subset=["نسبة المطابقة %"])
+            .map(color_pct, subset=["نسبة المطابقة %"])
             .format({"نسبة المطابقة %": "{:.0f}%"})
         )
 
