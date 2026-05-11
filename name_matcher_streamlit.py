@@ -606,7 +606,7 @@ def main():
             )
         with col_f2:
             filter_pct = st.slider(
-                "نسبة المطابقة ≥", 0, 100, 0, key="filter_pct"
+                "نسبة المطابقة ≥", 80, 100, 0, key="filter_pct"
             )
 
         display_df = result_df.copy()
